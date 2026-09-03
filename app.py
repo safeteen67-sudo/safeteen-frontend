@@ -17,7 +17,7 @@ ALLOWED_ORIGIN = os.environ.get("ALLOWED_ORIGIN", "*")
 CORS(app, resources={r"/api/*": {"origins": ALLOWED_ORIGIN}})
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
 GEMINI_URL = (
     f"https://generativelanguage.googleapis.com/v1beta/models/"
     f"{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
